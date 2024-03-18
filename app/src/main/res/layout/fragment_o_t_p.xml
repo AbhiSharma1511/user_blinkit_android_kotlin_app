@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".authFragments.OTPFragment">
+
+    <Toolbar
+        android:id="@+id/tbOtpFragment"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:title="OTP Verification"
+        android:titleTextColor="@color/black"
+        android:background="@color/yellow"
+        android:navigationIcon="@drawable/baseline_arrow_back_24"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#DAD4D4"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="We have sent a verification code to"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:id="@+id/tvOtpPhoneNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="+91..."
+        android:gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/black"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        app:boxCornerRadiusBottomStart="@dimen/_10sdp"
+        app:boxCornerRadiusBottomEnd="@dimen/_10sdp"
+        app:boxCornerRadiusTopStart="@dimen/_10sdp"
+        app:boxCornerRadiusTopEnd="@dimen/_10sdp">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/otpNumber"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:hint="Enter OTP"
+            android:textSize="18sp"
+            android:inputType="number"
+            android:maxLength="6"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnContinue"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:gravity="center"
+        android:layout_marginHorizontal="@dimen/_26sdp"
+        android:layout_marginTop="30dp"
+        android:backgroundTint="#226AE8"
+        android:text="Login"
+        android:textColor="#FFFFFF"
+        android:textAllCaps="false"
+        android:textSize="@dimen/_15sdp"
+        app:cornerRadius="@dimen/_10sdp"/>
+
+
+
+</LinearLayout>

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "352985170528",
+    "project_id": "userblinkit-19135",
+    "storage_bucket": "userblinkit-19135.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:352985170528:android:0f357f8e976caa35f0f905",
+        "android_client_info": {
+          "package_name": "com.kotlin.userblinkit"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAU0ztuq_soqEQdkFAsc9nNSxzZJvFigdQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
