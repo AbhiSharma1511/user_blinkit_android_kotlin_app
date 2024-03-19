@@ -134,15 +134,17 @@
                 android:layout_gravity="center"
                 app:spanCount="4"
                 app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"/>
+            <Button
+                android:id="@+id/btnLogout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Logout"
+                android:visibility="visible"
+                android:layout_gravity="center_horizontal"/>
         </LinearLayout>
+
     </androidx.core.widget.NestedScrollView>
 
-   <Button
-        android:id="@+id/btnLogout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Logout"
-       android:visibility="invisible"
-        android:layout_gravity="center_horizontal"/>
+
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -7,15 +7,18 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat
+import androidx.fragment.app.viewModels
 import com.kotlin.userblinkit.activity.AuthMainActivity
 import com.kotlin.userblinkit.adapters.CategoryAdapter
 import com.kotlin.userblinkit.databinding.FragmentHomeBinding
 import com.kotlin.userblinkit.models.CategoryModel
+import com.kotlin.userblinkit.viewModels.AuthViewModel
 import java.util.Locale.Category
 
 class HomeFragment : Fragment() {
 
     private lateinit var binding: FragmentHomeBinding
+    private val viewModel: AuthViewModel by viewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -42,11 +45,9 @@ class HomeFragment : Fragment() {
 
     private fun clickOnBtnLogout() {
         binding.btnLogout.setOnClickListener {
-        val user = Utils.getAuthInstance()?.currentUser
-            if(user!=null){
-                Utils.getAuthInstance().signOut()
-                startActivity(Intent(requireActivity(),AuthMainActivity::class.java))
-                requireActivity().finish()
+        if(viewModel.logoutCurrentUse()){
+            startActivity(Intent(requireActivity(), AuthMainActivity::class.java))
+            requireActivity().finish()
             }
         }
     }

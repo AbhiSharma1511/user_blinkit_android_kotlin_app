@@ -3,6 +3,7 @@ package com.kotlin.userblinkit.viewModels
 import android.app.Activity
 import android.util.Log
 import android.widget.Toast
+import androidx.core.content.ContextCompat
 import androidx.lifecycle.ViewModel
 import com.google.firebase.Firebase
 import com.google.firebase.FirebaseException
@@ -79,6 +80,15 @@ class AuthViewModel : ViewModel() {
                     Log.e(TAG, "signInWithPhoneAuthCredential: Sign-in failed.", task.exception)
                 }
             }
+    }
+
+    fun logoutCurrentUse() : Boolean {
+        val user1 = Utils.getAuthInstance().currentUser
+        if(user1!=null){
+            Utils.getAuthInstance().signOut()
+            return true
+        }
+        return false
     }
 
     companion object {
